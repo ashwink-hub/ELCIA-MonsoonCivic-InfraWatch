@@ -13,10 +13,57 @@ Edge-AI system for autonomous pothole, waterlogging &amp; drainage defect detect
 ##  3-Second Visual Execution
 > **Live Feed Analytics:** Monocular drone stream processed entirely on local edge node. Instance segmentation extracts pixel boundaries for exact area ($m^2$) & volume estimation, emitting instant municipal work orders.
 
-![Live Demo Placeholder](https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png) 
 *(Replace with demo GIF/screenshot of your running script or Streamlit UI)*
 
 ---
+## System Architecture & Processing Pipeline
+
+```text
+  +-------------------------------------------------------------------------+
+  |                 AERIAL DRONE & FIXED STREET POLE FEEDS                  |
+  |        (640x480 / 720p @ 30 FPS RTSP Monocular Video Stream)            |
+  +------------------------------------┬------------------------------------+
+                                       |
+                                       v
+  +-------------------------------------------------------------------------+
+  |                     LOCAL EDGE-AI INFERENCE NODE                        |
+  |  +-------------------------------------------------------------------+  |
+  |  |  YOLOv8-Seg INT8 ONNX Model (Quantized Inference Pipeline)        |  |
+  |  |  * Model Size: 9.8 MB (-79.8%)  | Latency: 11.8 ms/frame           |  |
+  |  +---------------------------------┬---------------------------------+  |
+  |                                    |                                    |
+  |                                    v                                    |
+  |  +-------------------------------------------------------------------+  |
+  |  |               SPATIAL VOLUMETRIC & AREA ESTIMATOR                 |  |
+  |  |  * Extracts Pixel Boundary Segmentation Masks                     |  |
+  |  |  * Computes Surface Defect Area (m²) & Max Depth (cm)             |  |
+  |  +---------------------------------┬---------------------------------+  |
+  +------------------------------------┼------------------------------------+
+                                       |
+                                       v
+  +-------------------------------------------------------------------------+
+  |                    MATHEMATICAL SEVERITY ENGINE                         |
+  |    Urgency Score = min(10.0, Area_Weight * Depth_Factor * Impact)      |
+  |    - Low Priority (Score < 4.0)   : Logged to Routine Queue            |
+  |    - Medium Priority (4.0 - 7.9) : Scheduled Maintenance (48h Window)  |
+  |    - High Priority (Score >= 8.0) : Critical Work Order Dispatch        |
+  +------------------------------------┬------------------------------------+
+                                       |
+                                       v
+  +-------------------------------------------------------------------------+
+  |                 MUNICIPAL CONTROL ROOM & ACTION TRIGGER                 |
+  |  +-------------------------------------------------------------------+  |
+  |  |  Structured JSON Payload Emitter                                  |  |
+  |  |  (Zone ID, Geofence Pin, Defect Area & Cost Estimate)             |  |
+  |  +---------------------------------┬---------------------------------+  |
+  |                                    |                                    |
+  |                                    v                                    |
+  |  +-------------------------------------------------------------------+  |
+  |  |  Streamlit Executive Control Room Dashboard (dashboard.py)        |  |
+  |  |  * Live Feed Overlay  | Active Work Order Queue                   |  |
+  |  |  * Automated Repair Dispatch Signal to ELCIA Maintenance Crew     |  |
+  |  +-------------------------------------------------------------------+  |
+  +-------------------------------------------------------------------------+
 
 ##  Edge Model Benchmarking (The Proof)
 
