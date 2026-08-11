@@ -98,3 +98,8 @@ When a defect is detected, the pipeline instantly emits a structured municipal p
   "recommended_action": "PRIORITY_1_DISPATCH_REPAIR_CREW"
 } 
 ``
+## Snapshot of the dashboard after running that annotated video 
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/17df0f22-13c3-43bf-9c5a-8f2688849174" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/06f3fa4f-6784-4f10-9b01-d841d26dfb3e" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/42168140-e065-46ac-a5f2-cc8f8439b5eb" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/970b19be-c2ee-446f-a618-76a80c41f0bc" />
