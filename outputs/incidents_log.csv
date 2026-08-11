@@ -1,0 +1,2 @@
+timestamp,incident_id,zone_id,defect_type,surface_area_m2,urgency_score,action_status
+2026-08-11 21:30:00,INF-20260811-001,ELCIA_WEST_PHASE_GATE4,POTHOLE_SEVERITY_HIGH,1.2,8.5,DISPATCH_REQUIRED
