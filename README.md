@@ -8,12 +8,7 @@ Edge-AI system for autonomous pothole, waterlogging &amp; drainage defect detect
 [![ONNX INT8](https://img.shields.io/badge/Inference-ONNX%20INT8%20(11.8ms)-orange.svg)](https://onnxruntime.ai/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
----
 
-##  3-Second Visual Execution
-> **Live Feed Analytics:** Monocular drone stream processed entirely on local edge node. Instance segmentation extracts pixel boundaries for exact area ($m^2$) & volume estimation, emitting instant municipal work orders.
-
-*(Replace with demo GIF/screenshot of your running script or Streamlit UI)*
 
 ---
 ## System Architecture & Processing Pipeline
@@ -65,6 +60,8 @@ Edge-AI system for autonomous pothole, waterlogging &amp; drainage defect detect
   |  +-------------------------------------------------------------------+  |
   +-------------------------------------------------------------------------+
 
+
+```
 ##  Edge Model Benchmarking (The Proof)
 
 To run efficiently on ELCIA drone feeds and local street poles without cloud dependencies, the baseline segmentation model was exported to ONNX and quantized from **FP32** to **INT8**:
@@ -105,8 +102,6 @@ When a defect is detected, the pipeline instantly emits a structured municipal p
     "est_repair_time_hr": 2.5
   },
   "urgency_score": 8.5,
-```
-
 
 ##  Visual Proof & Control Room Interface
 
