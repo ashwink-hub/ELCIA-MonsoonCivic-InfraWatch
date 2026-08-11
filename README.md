@@ -10,7 +10,7 @@ Edge-AI system for autonomous pothole, waterlogging &amp; drainage defect detect
 
 ---
 
-## ⚡ 3-Second Visual Execution
+##  3-Second Visual Execution
 > **Live Feed Analytics:** Monocular drone stream processed entirely on local edge node. Instance segmentation extracts pixel boundaries for exact area ($m^2$) & volume estimation, emitting instant municipal work orders.
 
 ![Live Demo Placeholder](https://raw.githubusercontent.com/ultralytics/assets/main/yolov8/banner-yolov8.png) 
@@ -18,7 +18,7 @@ Edge-AI system for autonomous pothole, waterlogging &amp; drainage defect detect
 
 ---
 
-## 🚀 Edge Model Benchmarking (The Proof)
+##  Edge Model Benchmarking (The Proof)
 
 To run efficiently on ELCIA drone feeds and local street poles without cloud dependencies, the baseline segmentation model was exported to ONNX and quantized from **FP32** to **INT8**:
 
@@ -31,7 +31,7 @@ To run efficiently on ELCIA drone feeds and local street poles without cloud dep
 
 ---
 
-## 🧮 Mathematical Severity & Work Order Logic
+##  Mathematical Severity & Work Order Logic
 
 Urgency Scores ($US$) are dynamically computed for every detected civic defect:
 
@@ -43,7 +43,7 @@ $$\text{Urgency Score (US)} = \min(10.0, \text{Defect Area Weight} \times \text{
 
 ---
 
-## 📦 Output JSON Payload Schema
+##  Output JSON Payload Schema
 
 When a defect is detected, the pipeline instantly emits a structured municipal payload:
 
