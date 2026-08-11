@@ -103,3 +103,11 @@ When a defect is detected, the pipeline instantly emits a structured municipal p
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/06f3fa4f-6784-4f10-9b01-d841d26dfb3e" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/42168140-e065-46ac-a5f2-cc8f8439b5eb" />
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/970b19be-c2ee-446f-a618-76a80c41f0bc" />
+
+
+
+## 📷 Visual Proof & Control Room Interface
+
+| Edge Inference Mask Overlay | Municipal Streamlit Dashboard |
+| :---: | :---: |
+| ![Annotated Frame](outputs/sample_snapshot.jpg) | ![Dashboard Preview](outputs/dashboard_preview.png) |
