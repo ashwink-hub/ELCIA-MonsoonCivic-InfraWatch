@@ -47,7 +47,7 @@ $$\text{Urgency Score (US)} = \min(10.0, \text{Defect Area Weight} \times \text{
 
 When a defect is detected, the pipeline instantly emits a structured municipal payload:
 
-```json
+```bash
 {
   "incident_id": "INF-20260810-042",
   "zone_id": "ELCIA_WEST_PHASE_GATE4",
@@ -58,8 +58,8 @@ When a defect is detected, the pipeline instantly emits a structured municipal p
     "est_repair_time_hr": 2.5
   },
   "urgency_score": 8.5,
-  "recommended_action": "PRIORITY_1_DISPATCH_REPAIR_CREW"
-}
+```
+
 ## Sample Annotated Screenshots
 <img width="1917" height="1072" alt="sample_snapshot1" src="https://github.com/user-attachments/assets/253a41e7-bbff-40e0-9fc4-933d8ba9a757" />
 
@@ -68,7 +68,7 @@ When a defect is detected, the pipeline instantly emits a structured municipal p
 <img width="1917" height="897" alt="sample_snapshot3" src="https://github.com/user-attachments/assets/b6d9972a-c9f9-489f-bf8e-120635112633" />
 
 ### The below is the actual log file generated from the annotated demo video
-
+```bash
   timestamp,incident_id,zone_id,defect_type,surface_area_m2,urgency_score,action_status
 2026-08-11 22:27:56,INF-20260811-001,ELCIA_WEST_PHASE_GATE4,WATERLOGGING_ZONE,0.43,3.9,LOGGED
 2026-08-11 22:27:58,INF-20260811-002,ELCIA_WEST_PHASE_GATE4,WATERLOGGING_ZONE,0.45,4.0,LOGGED
@@ -93,3 +93,8 @@ When a defect is detected, the pipeline instantly emits a structured municipal p
 2026-08-11 22:28:41,INF-20260811-021,ELCIA_WEST_PHASE_GATE4,WATERLOGGING_ZONE,0.68,6.1,LOGGED
 2026-08-11 22:29:01,INF-20260811-022,ELCIA_WEST_PHASE_GATE4,WATERLOGGING_ZONE,0.31,2.8,LOGGED
 
+```
+
+  "recommended_action": "PRIORITY_1_DISPATCH_REPAIR_CREW"
+} 
+``
