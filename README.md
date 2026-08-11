@@ -102,7 +102,7 @@ When a defect is detected, the pipeline instantly emits a structured municipal p
     "est_repair_time_hr": 2.5
   },
   "urgency_score": 8.5,
-
+```
 ##  Visual Proof & Control Room Interface
 
 | Edge Inference Mask Overlay | Municipal Streamlit Dashboard |
